@@ -11,17 +11,6 @@ A tiny and powerful engine to extend your app with a lot of functionalities
 
 <br>
 
-## Summary
-
-- [Getting started](#getting-started)
-  - [Installation](#installation)
-- [Tests](#tests)
-- [Included libraries](#included-libraries)
-- [Authors](#authors)
-- [License](#license)
-
-<br>
-
 ---
 
 ## Getting started
@@ -55,7 +44,7 @@ This lib is analyzed and tested with:
 ## Included libraries
 
 - [Reduxjs toolkit](https://redux-toolkit.js.org/), for global state management
-- This library is written entirely with [Typescript](https://www.typescriptlang.org/)
+- `MoBrix-engine` is written entirely with [Typescript](https://www.typescriptlang.org/)
 
 <br>
 

@@ -43,7 +43,7 @@ const HeaderContent = () => {
       dark={dark}
       expanded={
         <div className="flex flex-row mt-6">
-          <div className="my-auto">
+          <div className="my-auto" key="drawer-button">
             <Button
               aria-label="drawer button"
               onClick={() => {
@@ -55,7 +55,7 @@ const HeaderContent = () => {
               <div className="p-1 sm:p-2 md:p-2">{BurgerIcon}</div>
             </Button>
           </div>
-          <div className="my-auto">
+          <div className="my-auto" key="back-button-box">
             <Button
               aria-label="back button"
               onClick={() => {
@@ -80,7 +80,7 @@ const HeaderContent = () => {
               </svg>
             </Button>
           </div>
-          <div className="m-auto flex flex-row p-2">
+          <div className="m-auto flex flex-row p-2" key="logo-box">
             <div className="mr-2 my-auto"> {LogoIcon}</div>
             <div className="flex flex-col my-auto">
               <Link
@@ -100,19 +100,21 @@ const HeaderContent = () => {
       <div className="flex flex-col pb-4">
         <div className="flex" style={{ justifyContent: "flex-end" }}>
           <div className="flex flex-row">
-            <div className="flex flex-row pr-4">
+            <div className="flex flex-row pr-4" key="docs-box">
               <Link
                 to="https://cianciarusocataldo.github.io/mobrix-engine/docs"
                 className="m-auto"
                 newTab
+                key="docs-icon"
               >
                 {DocsIcon}
               </Link>
-              <div className="m-auto hidden sm:block">
+              <div key="docs-link-box" className="m-auto hidden sm:block">
                 <Link
                   dark={dark}
                   to="https://cianciarusocataldo.github.io/mobrix-engine/docs"
                   newTab
+                  key="docs-link"
                 >
                   {t("docs")}
                 </Link>
@@ -121,6 +123,7 @@ const HeaderContent = () => {
             <Dropdown
               className="p-0"
               dark={false}
+              key="language-selector"
               value={LANGUAGES.findIndex((lang) => lang === language)}
               shadow
               onChange={(lang: number) => {
@@ -132,6 +135,7 @@ const HeaderContent = () => {
               }))}
             />
             <Toggle
+              key="ui-mode-selector"
               onIcon={LightModeIcon}
               offIcon={DarkModeIcon}
               shadow

@@ -1,18 +1,14 @@
 import React from "react";
 
-import {
-  drawerPlugin,
-  formsPlugin,
-  pageRouterPlugin,
-} from "mobrix-designer-plugins";
-
+import { drawerPlugin } from "mobrix-designer-plugin-drawer";
+import { pageRouterPlugin } from "mobrix-designer-plugin-router";
 import { DrawerContent } from "contents/drawer";
 import footer from "contents/footer";
 import header from "contents/header";
 import modals from "contents/modals";
 
 const appConfig = {
-  plugins: [drawerPlugin, pageRouterPlugin, formsPlugin],
+  plugins: [drawerPlugin, pageRouterPlugin],
   preloader: () => <div className="preloader" />,
   pageRouter: {
     render: (route) => React.lazy(() => import(`./pages/${route}`)),

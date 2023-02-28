@@ -22,7 +22,7 @@ export const DrawerContent = () => {
   const { t } = useTranslation(i18n.titlesNamespace || i18n.defaultNamespace);
 
   return (
-    <div>
+    <div className="m-2">
       {Object.keys(PATHS).map((route, index) => {
         return (
           <div className="mt-1 mb-3" key={`drawer_app_element_${index}`}>
